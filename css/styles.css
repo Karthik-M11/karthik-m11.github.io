@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background: linear-gradient(270deg, #e85069, #735d9f, #51a0e3);
+    background-size: 200% 200%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 120px;
+}
+
+h1 > span {
+    -webkit-text-fill-color: initial;
+}
+
+.name {
+    font-family: "Indie Flower", cursive;
+    font-weight: 700;
+    font-style: normal;
+    position: relative;
+    margin-left: 200px;
+    padding: 0px;
+    margin-top: -100px;
+    background: -webkit-linear-gradient(#dbdad0, #a7a7a7, #dbdad0);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: fadeIn 5s ,AnimationName 10s ease infinite;
+}
+
+img {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 50px;
+    filter: brightness(60%);
+    animation: fadeIn 5s;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.resume {
+    text-align: right;
+    font-family: "Indie Flower", cursive;
+    font-weight: 500;
+    font-style: normal;
+    position: absolute;
+    top: 25px;
+    right: 250px;
+    background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 5s;
+}
+
+.contact {
+    text-align: right;
+    font-family: "Indie Flower", cursive;
+    font-weight: 500;
+    font-style: normal;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+    background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 5s;
+}
+
+.wave {
+    animation-name: wave-animation;  
+    animation-duration: 2s;        
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;      
+    display: inline-block;
+  }
+
+.get_in_touch {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    left: 150px;
+    top: 50px;
+    position: relative;
+    background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 5s;
+}
+
+.vertical-line {
+    left: 50%;
+    position: fixed;
+    border-left: 1px solid black;
+    top: 150px;
+    bottom: 150px;
+    animation: fadeIn 5s;
+}
+
+
+contact_headline {
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+
+links {
+    font-size: 20px;
+}
+
+.spacing {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    word-spacing: 74px;
+}
+
+.phone {
+    position: fixed;
+    top: 0px;
+    right: 200px;
+    filter: brightness(150%);
+    animation: fadeIn 5s;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }
+}
