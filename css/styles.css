@@ -110,6 +110,7 @@ links {
     position: fixed;
     filter: brightness(150%);
     animation: fadeIn 5s;
+    padding-left: 0;
 }
 
 @-webkit-keyframes AnimationName {
@@ -135,7 +136,30 @@ links {
     0% { transform: rotate( 0.0deg) }
    10% { transform: rotate(14.0deg) }
 }
-@media (min-width: 481px) and (max-width: 600px) {
+
+
+
+/* ----------------------------------Multi-device settings---------------------------------- */
+
+
+
+@media (max-width: 480px) {
+    .vertical-line {
+        bottom: 50%;
+        border-top: 1px solid black;
+        left: 20%;
+        right: 20%;
+    }
+    .cat {
+        left: 15%;
+        bottom: 15%;
+    }
+    .get_in_touch {
+        margin-left: 25%;
+        top: 20%;
+    }
+}
+@media (min-width: 481px) and (max-width: 640px) {
     .vertical-line {
         bottom: 50%;
         border-top: 1px solid black;
@@ -151,7 +175,7 @@ links {
         top: 20%;
     }
 }
-@media (min-width: 601px) {
+@media (min-width:641px) and (max-width:960px) {
     .vertical-line {
         left: 50%;
         border-left: 1px solid black;
@@ -160,26 +184,26 @@ links {
     }
     .cat {
         left: 60%;
-        bottom: 27%
+        bottom: 35%
+    }
+    .get_in_touch {
+        left: 12%;
+        top: 35%;
+    }
+}
+@media (min-width: 961px) {
+    .vertical-line {
+        left: 50%;
+        border-left: 1px solid black;
+        top: 25%;
+        bottom: 25%;
+    }
+    .cat {
+        left: 60%;
+        bottom: 25%
     }
     .get_in_touch {
         left: 12%;
         top: 35%;
     }
 } 
-@media (max-width: 480px) {
-    .vertical-line {
-        bottom: 50%;
-        border-top: 1px solid black;
-        left: 20%;
-        right: 20%;
-    }
-    .cat {
-        left: 5%;
-        bottom: 15%;
-    }
-    .get_in_touch {
-        margin-left: 15%;
-        top: 20%;
-    }
-}
