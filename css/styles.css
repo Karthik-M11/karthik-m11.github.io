@@ -9,8 +9,7 @@ body {
 }
 
 h1 {
-    font-size: 9.55vw;
-    min-height: 50px;
+    font-size: max(70px,9.55vw);
 }
 
 h1 > span {
@@ -22,7 +21,7 @@ h1 > span {
     font-weight: 700;
     font-style: normal;
     position: relative;
-    margin-left: 200px;
+    margin-left: max(60px,16vw);
     padding: 0px;
     margin-top: -7.8%;
     max-width: fit-content;
@@ -45,43 +44,23 @@ img {
 }
 
 h2 {
-    font-size: 2.8vw;
+    font-size: max(20px, 2.8vw);
 }
 
-.no-bullets {
-    list-style-type: none;
-    /* word-spacing: 5.5vh; */
-}
-
-.resume {
+.menu {
     text-align: right;
     font-family: "Indie Flower", cursive;
     font-weight: 500;
     font-style: normal;
     position: absolute;
-    top: 25px;
-    right: 20%;
-    background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
-    background-clip: content-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fadeIn 5s;
-    padding-right: min(200px, 0);
-}
-
-.contact {
-    text-align: right;
-    font-family: "Indie Flower", cursive;
-    font-weight: 500;
-    font-style: normal;
-    position: absolute;
-    top: 25px;
+    top: 38px;
     right: 8%;
     background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fadeIn 5s;
+    word-spacing: 4vw;
 }
 
 .wave {
