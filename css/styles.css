@@ -76,8 +76,6 @@ h2 {
     font-weight: 400;
     font-style: normal;
     text-align: left;
-    left: 12vw;
-    top: 50px;
     position: relative;
     background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
     background-clip: content-box;
@@ -87,22 +85,18 @@ h2 {
 }
 
 .vertical-line {
-    left: 50%;
     position: fixed;
-    border-left: 1px solid black;
-    top: 150px;
-    bottom: 150px;
     animation: fadeIn 5s;
 }
 
 
 contact_headline {
-    font-size: 4.345vw;
+    font-size: max(4.345vw,30px);
     letter-spacing: 3px;
 }
 
 links {
-    font-size: 1.58vw;
+    font-size: max(1.58vw,15px);
 }
 
 .spacing {
@@ -114,8 +108,6 @@ links {
 
 .cat {
     position: absolute;
-    margin-top: -21vw;
-    right: 15%;
     filter: brightness(150%);
     animation: fadeIn 5s;
 }
@@ -143,3 +135,35 @@ links {
     0% { transform: rotate( 0.0deg) }
    10% { transform: rotate(14.0deg) }
 }
+@media (max-width: 600px) {
+    .vertical-line {
+        top: 50%;
+        border-top: 1px solid black;
+        left: 25%;
+        right: 25%;
+    }
+    .cat {
+        margin-top: -1vw;
+        right: 37%;
+    }
+    .get_in_touch {
+        left: 30%;
+        top: -15px;
+    }
+}
+@media (min-width: 600px) {
+    .vertical-line {
+        left: 50%;
+        border-left: 1px solid black;
+        top: 25%;
+        bottom: 25%;
+    }
+    .cat {
+        margin-top: -21vw;
+        right: 15%;
+    }
+    .get_in_touch {
+        left: 12vw;
+        top: 50px;
+    }
+} 
