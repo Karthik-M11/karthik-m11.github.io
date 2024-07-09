@@ -9,7 +9,8 @@ body {
 }
 
 h1 {
-    font-size: 120px;
+    font-size: 9.55vw;
+    min-height: 50px;
 }
 
 h1 > span {
@@ -23,7 +24,8 @@ h1 > span {
     position: relative;
     margin-left: 200px;
     padding: 0px;
-    margin-top: -100px;
+    margin-top: -7.8%;
+    max-width: fit-content;
     background: -webkit-linear-gradient(#dbdad0, #a7a7a7, #dbdad0);
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -31,18 +33,24 @@ h1 > span {
     -webkit-animation: AnimationName 10s ease infinite;
     -moz-animation: AnimationName 10s ease infinite;
     animation: fadeIn 5s ,AnimationName 10s ease infinite;
+    margin-bottom: 9vh;
 }
 
 img {
     position: relative;
     margin-left: 50px;
     margin-top: 50px;
-    filter: brightness(60%);
+    filter: brightness(65%);
     animation: fadeIn 5s;
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 2.8vw;
+}
+
+.no-bullets {
+    list-style-type: none;
+    /* word-spacing: 5.5vh; */
 }
 
 .resume {
@@ -52,12 +60,13 @@ h2 {
     font-style: normal;
     position: absolute;
     top: 25px;
-    right: 250px;
+    right: 20%;
     background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fadeIn 5s;
+    padding-right: min(200px, 0);
 }
 
 .contact {
@@ -67,7 +76,7 @@ h2 {
     font-style: normal;
     position: absolute;
     top: 25px;
-    right: 100px;
+    right: 8%;
     background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -88,7 +97,7 @@ h2 {
     font-weight: 400;
     font-style: normal;
     text-align: left;
-    left: 150px;
+    left: 12vw;
     top: 50px;
     position: relative;
     background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
@@ -109,25 +118,25 @@ h2 {
 
 
 contact_headline {
-    font-size: 55px;
+    font-size: 4.345vw;
     letter-spacing: 3px;
 }
 
 links {
-    font-size: 20px;
+    font-size: 1.58vw;
 }
 
 .spacing {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
-    word-spacing: 74px;
+    word-spacing: 5.88vw;
 }
 
-.phone {
-    position: fixed;
-    top: 0px;
-    right: 200px;
+.cat {
+    position: absolute;
+    margin-top: -21vw;
+    right: 15%;
     filter: brightness(150%);
     animation: fadeIn 5s;
 }
