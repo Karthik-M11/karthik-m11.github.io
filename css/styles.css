@@ -76,7 +76,7 @@ h2 {
     font-weight: 400;
     font-style: normal;
     text-align: left;
-    position: relative;
+    position: fixed;
     background: -webkit-linear-gradient(#fffdfd, #cdc9c9, #fefefe);
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -107,7 +107,7 @@ links {
 }
 
 .cat {
-    position: relative;
+    position: fixed;
     filter: brightness(150%);
     animation: fadeIn 5s;
 }
@@ -135,23 +135,23 @@ links {
     0% { transform: rotate( 0.0deg) }
    10% { transform: rotate(14.0deg) }
 }
-@media (orientation: portrait) {
+@media (max-width: 600px) {
     .vertical-line {
-        top: 50%;
+        bottom: 50%;
         border-top: 1px solid black;
         left: 25%;
         right: 25%;
     }
     .cat {
-        margin-top: 0;
-        margin-left: 25%;
+        left: 25%;
+        bottom: 10%;
     }
     .get_in_touch {
-        left: 30%;
-        top: -15px;
+        margin-left: 30%;
+        top: 20%;
     }
 }
-@media (orientation: landscape) {
+@media (min-width: 601px) {
     .vertical-line {
         left: 50%;
         border-left: 1px solid black;
@@ -159,11 +159,11 @@ links {
         bottom: 25%;
     }
     .cat {
-        margin-top: -21%;
-        margin-left: 59%;
+        left: 60%;
+        bottom: 27%
     }
     .get_in_touch {
-        left: 12vw;
-        top: 50px;
+        left: 12%;
+        top: 35%;
     }
 } 
