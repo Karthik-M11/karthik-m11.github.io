@@ -107,7 +107,7 @@ links {
 }
 
 .cat {
-    position: absolute;
+    position: relative;
     filter: brightness(150%);
     animation: fadeIn 5s;
 }
@@ -143,8 +143,8 @@ links {
         right: 25%;
     }
     .cat {
-        margin-top: -1vw;
-        right: 37%;
+        margin-top: 0;
+        margin-left: 25%;
     }
     .get_in_touch {
         left: 30%;
@@ -159,8 +159,8 @@ links {
         bottom: 25%;
     }
     .cat {
-        margin-top: -21vw;
-        right: 15%;
+        margin-top: -21%;
+        margin-left: 59%;
     }
     .get_in_touch {
         left: 12vw;
