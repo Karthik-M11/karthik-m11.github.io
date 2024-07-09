@@ -135,7 +135,7 @@ links {
     0% { transform: rotate( 0.0deg) }
    10% { transform: rotate(14.0deg) }
 }
-@media (max-width: 600px) {
+@media (orientation: portrait) {
     .vertical-line {
         top: 50%;
         border-top: 1px solid black;
@@ -151,7 +151,7 @@ links {
         top: -15px;
     }
 }
-@media (min-width: 600px) {
+@media (orientation: landscape) {
     .vertical-line {
         left: 50%;
         border-left: 1px solid black;
