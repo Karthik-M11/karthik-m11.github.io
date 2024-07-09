@@ -143,7 +143,7 @@ links {
 @media (max-width: 480px) {
     .name {
         margin-left: max(60px,16vw);
-        margin-top: 10%;
+        margin-top: 25%;
     }
     .vertical-line {
         bottom: 50%;
