@@ -1,0 +1,18 @@
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    var button = document.querySelector('.theme-toggle');
+    var page = document.querySelector('.page-content');
+    if (!button || !page) return;
+
+    var glitchTimer;
+    button.addEventListener('click', function () {
+      window.clearTimeout(glitchTimer);
+      page.classList.remove('page-glitch');
+      void page.offsetWidth;
+      page.classList.add('page-glitch');
+      glitchTimer = window.setTimeout(function () {
+        page.classList.remove('page-glitch');
+      }, 650);
+    });
+  });
+</script>

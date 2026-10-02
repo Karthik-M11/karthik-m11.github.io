@@ -251,6 +251,11 @@ noscript .theme-toggle { display: none; }
   top: 0;
   border: 2px transparent solid;
   outline: none;
+  transition: transform 120ms ease-out, color 120ms ease-out;
+}
+
+.theme-toggle:active {
+  transform: scale(0.88);
 }
 
 .theme-toggle:hover {
@@ -260,10 +265,30 @@ noscript .theme-toggle { display: none; }
 .theme-toggle:focus {
   outline: none;
 }
+
+.page-content.page-glitch {
+  animation: page-glitch 600ms steps(1, end) both;
+}
+
+@keyframes page-glitch {
+  0%, 100% { transform: translate(0); filter: none; }
+  10% { transform: translate(-3px, 1px); filter: drop-shadow(2px 0 rgba(139, 184, 255, 0.65)) drop-shadow(-2px 0 rgba(255, 70, 95, 0.4)); }
+  20% { transform: translate(3px, -1px) skewX(-0.4deg); }
+  35% { transform: translate(-2px, 0); filter: drop-shadow(-2px 0 rgba(139, 184, 255, 0.55)) drop-shadow(2px 0 rgba(255, 70, 95, 0.35)); }
+  48% { transform: translate(2px, 1px); }
+  62% { transform: translate(-1px, -1px) skewX(0.25deg); filter: drop-shadow(1px 0 rgba(139, 184, 255, 0.5)); }
+  78% { transform: translate(2px, 0); }
+}
+
 @media screen and (max-width: 600px) {
   .theme-toggle {
     margin: 0.5em;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle { transition: none; }
+  .page-glitch { animation: none; }
 }
 .dashed {
   border-top: 1px var(--text) dashed;
