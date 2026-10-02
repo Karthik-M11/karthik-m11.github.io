@@ -1,0 +1,43 @@
+navbar_entries:
+  - title: about
+    url: about
+
+  - title: blog
+    url: blog
+
+  - title: projects
+    url: projects
+
+
+project_entries:
+  - title: Luminosity Drone
+    url: https://github.com/Karthik-M11/eyrc23_LD_1321
+    desc: >
+      An autonomous drone project built for the e-yantra 2023-24 competition.
+
+  - title: Password Manager
+    url: https://github.com/Karthik-M11/Password-Manager
+    desc: A python password manager with gui that will store your passwords.
+
+  - title: Stock Analyser
+    url: https://github.com/Karthik-M11/StockAnalyser_SMS
+    desc: >
+      Analyses stock trends of specified company and sends an SMS of the same along 
+      with related news headlines.
+
+
+footer_entries:
+  - title: linkedin
+    url: https://www.linkedin.com/in/karthik-manoranjan/
+
+  - title: github
+    url: https://github.com/YOUR_USERNAME
+
+  - title: mail
+    url: mailto:karthikmanoranjan11@gmail.com
+
+  - title: feed
+    url: feed.xml
+
+  - title: llms.txt
+    url: llms.txt

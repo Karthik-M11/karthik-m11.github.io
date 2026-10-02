@@ -1,63 +1,23 @@
 ---
 layout: default
 ---
-  <section class="wrapper{% if page.options contains 'minihead' %} minihead{% endif %} style5">
-    <div class="inner{% if page.options contains 'fullwidth' %} fullwidth{% endif %}">{%
-      unless site.navlinks == 'none'
-%}{%    if page.categories contains 'works'
-%}{%      assign idxperma = '/works/' | prepend: site.baseurl
-%}{%      assign idxtitle = 'Works Index'
-%}{%      assign idxbutton = 'Index'
-%}{%      include fn_groupsort_reverse.html unsorted=site.categories.works groupby='priority' sortby='date'
-%}{%    endif
-%}{%    if page.categories.first == 'topics' and page.categories.last != 'topics'
-%}{%      assign idxperma = page.categories | join: '/' | prepend: '/' | prepend: site.baseurl | append: '/'
-%}{%      assign idxtitle = 'Start page'
-%}{%      assign idxbutton = 'Start'
-%}{%      assign sorted_list = site.empty_array
-%}{%      for topic in site.categories.topics
-%}{%        if topic.categories.last == page.categories.last
-%}{%          assign sorted_list = sorted_list | push: topic
-%}{%        endif
-%}{%      endfor
-%}{%      assign sorted_list = sorted_list | sort: 'date'
-%}{%    endif
-%}{%  endunless
-%}{%  if sorted_list
-%}{%    if site.navlinks == 'top' or site.navlinks == 'both'
-%}{%      include fn_sortednav.html posclass='btntop'
-%}{%    endif
-%}{%  endif
-%}{%  unless page.options contains 'minihead' %}
-      <span id="post-date">{{ page.date  | date: "%-d %B %Y" }}</span><hr
-        style="margin-top:3px;" />{%
-      endunless
-%}{%  if page.categories contains 'works' and page.tags %}
-      <h4>Skills</h4>
-  {%    assign work = page
-%}{%    include techlist.html %}
-  {%  endif
-%}
 
-      {{ content }}{%
+<a href="javascript:history.back()" class="back-link" aria-label="Go back">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="15 18 9 12 15 6"></polyline>
+  </svg>
+</a>
+<h1 class="post-title">{{ page.title }}</h1>
+{% include date_and_social_share.html %}
 
+{%- if site.theme_config.show_toc and page.toc -%}
+  {% include toc.html %}
+{%- endif -%}
 
-      if sorted_list
-%}{%    if site.navlinks == 'bottom' or site.navlinks == 'both'
-%}{%      unless perma
-%}{%        assign perma = '/topics/' | prepend: site.baseurl
-%}{%      endunless
-%}{%      include fn_sortednav.html posclass='btnbottom'
-%}{%    endif
-%}{%  endif
-%}{%  unless page.author == 'none'
-%}{%    include author-block.html %}
-  {%  endunless
-%}{%  if jekyll.environment == "production"
-%}{%    unless page.options contains nocomment or page.categories contains 'works'
-%}{%      include disqus.html %}
-  {%    endunless
-%}{%  endif
-%}
-    </div>
-  </section>
+<div class="post-content{% if page.dropcap %} has-dropcap{% endif %}">
+  {{ content }}
+</div>
+
+{%- if site.theme_config.show_post_nav -%}
+  {% include post_nav.html %}
+{%- endif -%}

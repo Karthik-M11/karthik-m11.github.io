@@ -1,0 +1,31 @@
+---
+---
+
+@use "moonwalk";
+@use "list";
+@use "syntax";
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+button,
+input,
+textarea,
+select {
+  font-family: "JetBrains Mono", monospace;
+}
