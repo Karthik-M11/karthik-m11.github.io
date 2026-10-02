@@ -21,6 +21,57 @@ ul.horizontal-list {
   }
 }
 
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75em 1.5em;
+  padding: 0.25em 0 1.5em;
+  font-size: 0.8em;
+  color: var(--text);
+
+  .footer-links {
+    align-items: center;
+    gap: 0.55em;
+    margin: 0;
+  }
+
+  .footer-links li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55em;
+    margin: 0;
+  }
+
+  .footer-links li span,
+  .footer-credit span {
+    color: var(--text-secondary);
+  }
+
+  .footer-credit {
+    white-space: nowrap;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+  }
+
+  a:hover {
+    color: var(--links);
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .footer-credit {
+      white-space: normal;
+    }
+  }
+}
+
 .card {
   padding: 1.25em 1.4em;
   border: 1px solid var(--border);

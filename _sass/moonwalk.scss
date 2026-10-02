@@ -153,24 +153,30 @@ img {
       --share-text: #6e7781;
       --border: rgba(31, 35, 40, 0.15);
       --border-subtle: rgba(31, 35, 40, 0.08);
+      --aurora-background: none;
   }
 }
 // -------------- THEME SWITCHER -------------- //
 // Dark theme - GitHub Dark inspired
 @mixin dark-appearance {
   html, body  {
-      --headings: #f0f6fc;
-      --links: #4493f8;
-      --highlight: #e3b341;
-      --bg: #0d1117;
-      --bg-secondary: #21262d;
-      --bg-subtle: #161b22;
-      --text: #c9d1d9;
-      --text-secondary: #8b949e;
-      --code-text: #d2a8ff;
-      --share-text: #9198a1;
-      --border: rgba(240, 246, 252, 0.1);
-      --border-subtle: rgba(240, 246, 252, 0.06);
+      --headings: #f4f7ff;
+      --links: #8bb8ff;
+      --highlight: #20304a;
+      --bg: #050812;
+      --bg-secondary: #111a2b;
+      --bg-subtle: #0c1424;
+      --text: #e7edf8;
+      --text-secondary: #b7c5dc;
+      --code-text: #b9d3ff;
+      --share-text: #b7c5dc;
+      --border: rgba(139, 184, 255, 0.22);
+      --border-subtle: rgba(139, 184, 255, 0.12);
+      --aurora-background:
+        radial-gradient(ellipse at 18% 4%, rgba(65, 109, 197, 0.16), transparent 28%),
+        radial-gradient(ellipse at 82% 18%, rgba(65, 109, 197, 0.09), transparent 26%),
+        radial-gradient(ellipse at 52% 58%, rgba(5, 8, 18, 0.92) 0%, rgba(5, 8, 18, 0.72) 34%, transparent 66%),
+        radial-gradient(ellipse at 96% 94%, rgba(65, 109, 197, 0.12), transparent 30%);
   };
 }
 
@@ -188,7 +194,23 @@ html[data-theme="light"] { @include light-appearance; }
 
 html, body {
     background-color: var(--bg);
+    background-image: var(--aurora-background);
+    background-attachment: fixed;
     color: var(--text);
+}
+
+body {
+    background-size: 180% 180%, 170% 170%, 150% 150%, 140% 140%;
+    animation: aurora-drift 5s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift {
+    from { background-position: 0% 0%, 100% 15%, 50% 50%, 100% 100%; }
+    to { background-position: 100% 0%, 100% 15%, 50% 50%, 100% 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body { animation: none; }
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--headings);

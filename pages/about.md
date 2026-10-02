@@ -1,6 +1,7 @@
 ---
 layout: post
 title: About Me
+permalink: /about/
 ---
 
 Casual programmer who builds, breaks, and learns things.
