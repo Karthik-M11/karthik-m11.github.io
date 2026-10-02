@@ -38,9 +38,9 @@ theme_config:
   show_link_previews: true
 
   home:
-    title_projects: Projects
+    title_projects: Workbench
     title_misc_list: About
-    title_blog: Writing
+    title_blog: Brain Dump
     title_old_projects: Archive
 
 highlighter: rouge

@@ -8,11 +8,12 @@
     <main class="page-content" aria-label="Content">
       <div class="w">
         {{ content }}
-        {% if site.theme_config.appearance_toggle %}
-          {% include toggle_theme_button.html %}
-        {% endif %}
       </div>
     </main>
+
+    {% if site.theme_config.appearance_toggle %}
+      {% include toggle_theme_button.html %}
+    {% endif %}
 
     {%- if page.layout == "post" -%}
       {% include github_alerts.html %}

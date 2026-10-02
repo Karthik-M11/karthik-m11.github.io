@@ -1,27 +1,17 @@
 ---
 layout: projects
-title: Projects
+title: Workbench
 permalink: /projects/
+projects:
+  - title: Luminosity Drone
+    url: https://github.com/Karthik-M11/eyrc23_LD_1321
+    desc: An autonomous drone project built for the e-yantra 2023-24 competition.
+  - title: Password Manager
+    url: https://github.com/Karthik-M11/Password-Manager
+    desc: A Python password manager with a GUI for storing passwords.
+  - title: Stock Analyser
+    url: https://github.com/Karthik-M11/StockAnalyser_SMS
+    desc: Analyses stock trends for a specified company and sends an SMS with related news headlines.
 ---
 
-# Projects
-
 A collection of things I've built, experimented with, or spent an unreasonable amount of time on.
-
-## Spotify AI
-
-A local AI-powered Spotify assistant using Python, Spotify's API, and a locally running LLM.
-
-[View project](https://github.com/YOUR_USERNAME/spotify-ai)
-
-## Personal Website
-
-This website, built with Jekyll and the Moonwalk theme.
-
-[View source](https://github.com/YOUR_USERNAME/YOUR_REPO)
-
-## Game Reviews
-
-A collection of reviews and thoughts on games I've played.
-
-[View project](#)

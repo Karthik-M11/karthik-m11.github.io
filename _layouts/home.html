@@ -18,7 +18,11 @@ layout: default
 
 {% if site.theme_config.show_projects == true %}
   <h2 class="section-label">{{ site.theme_config.home.title_projects }}</h2>
-  {% include card_list.html collection=site.data.home.project_entries %}
+  {% assign workbench_page = site.pages | where: "url", "/projects/" | first %}
+  {% if workbench_page.projects %}
+    {% assign homepage_projects = workbench_page.projects | slice: 0, 6 %}
+    {% include card_list.html collection=homepage_projects %}
+  {% endif %}
 {% endif %}
 
 {% if site.theme_config.show_misc_list == true %}
@@ -28,7 +32,8 @@ layout: default
 
 {% if site.theme_config.show_blog == true %}
   <h2 class="section-label">{{ site.theme_config.home.title_blog }}</h2>
-  {% include post_list.html %}
+  {% assign recent_posts = site.posts | sort: "date" | reverse | slice: 0, 6 %}
+  {% include post_list.html posts=recent_posts %}
 {% endif %}
 
 {% if site.theme_config.show_old_projects == true %}
