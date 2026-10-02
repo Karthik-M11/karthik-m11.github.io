@@ -883,6 +883,8 @@ $baseurl: '{{ site.baseurl }}/images';
 			tbody {
 				tr {
 					td {
+						background: #000;
+						color: #fff;
 						border: solid 1px _palette(border);
 						border-left-width: 0;
 						border-top-width: 0;
