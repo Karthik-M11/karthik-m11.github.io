@@ -27,17 +27,11 @@ project_entries:
 
 
 footer_entries:
-  - title: linkedin
+  - title: LinkedIn
     url: https://www.linkedin.com/in/karthik-manoranjan/
 
-  - title: github
+  - title: GitHub
     url: https://github.com/Karthik-M11
 
-  - title: mail
-    url: mailto:karthikmanoranjan11@gmail.com
-
-  - title: feed
-    url: feed.xml
-
-  - title: llms.txt
-    url: llms.txt
+  - title: Mail
+    url: /contact/

@@ -42,11 +42,11 @@ layout: default
     <div class="dashed"></div>
     <div class="site-footer">
       <ul class="horizontal-list footer-links">
-        <li><a href="https://www.linkedin.com/in/karthik-manoranjan/">LinkedIn</a><span aria-hidden="true">·</span></li>
-        <li><a href="https://github.com/Karthik-M11">GitHub</a><span aria-hidden="true">·</span></li>
-        <li><a href="mailto:karthikmanoranjan11@gmail.com">Mail</a></li>
+        {% for item in site.data.home.footer_entries %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a>{% unless forloop.last %}<span aria-hidden="true">·</span>{% endunless %}</li>
+        {% endfor %}
       </ul>
-      <div class="footer-credit">&copy; {{ "now" | date: "%Y" }} Karthik <span aria-hidden="true">·</span> Built with <a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noopener noreferrer">Moonwalk</a></div>
+      <div class="footer-credit">&copy; {{ "now" | date: "%Y" }} {{ site.author }} <span aria-hidden="true">·</span> Built with <a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noopener noreferrer">Moonwalk</a></div>
     </div>
   </footer>
 {% endif %}
