@@ -9,10 +9,9 @@ layout: default
 
 <header>
   <h1>{{ page.title | default: site.theme_config.home.title_blog }}</h1>
-  {% if page.description %}
-    <p>{{ page.description }}</p>
-  {% endif %}
 </header>
 
-<h2 class="section-label">Recent writing</h2>
+{{ content }}
+
+<h2 class="section-label">Recent Dumps</h2>
 {% include post_list.html %}
