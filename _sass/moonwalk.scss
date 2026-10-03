@@ -281,16 +281,26 @@ noscript .theme-toggle { display: none; }
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    position: relative;
+  }
+
   header {
-    padding-top: 2.5em;
+    padding-top: 2em;
   }
 
   .theme-toggle {
+    position: absolute;
     top: 0;
     right: 0.5em;
     margin: 0;
     padding: 0;
     border: 0;
+  }
+
+  .theme-toggle svg {
+    width: 28px;
+    height: 28px;
   }
 }
 
