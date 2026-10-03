@@ -281,6 +281,10 @@ noscript .theme-toggle { display: none; }
 }
 
 @media screen and (max-width: 600px) {
+  .w {
+    padding-top: 4.5em;
+  }
+
   body {
     position: relative;
   }
