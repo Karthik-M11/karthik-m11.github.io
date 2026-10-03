@@ -309,6 +309,12 @@ noscript .theme-toggle { display: none; }
   }
 }
 
+@media screen and (max-width: 767px) {
+  .theme-toggle {
+    display: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .theme-toggle { transition: none; }
   .page-glitch { animation: none; }
